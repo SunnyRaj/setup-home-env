@@ -42,6 +42,8 @@ sudo apt-get install -y software-properties-common python-software-properties &&
 
 ##Setup tmux configuration
 
+touch .tmux.conf
+
 echo "
 
 # Change prefix key bindings

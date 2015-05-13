@@ -3,7 +3,7 @@
 
 sudo apt-get install -y build-essential tmux git vim curl zsh gparted
 
-mkdir Projects && sudo wget -O - https://github.com/nvie/vimrc/raw/master/autoinstall.sh | sh
+mkdir Projects && sudo wget -O - https://github.com/sunnyraj/vimrc/raw/master/autoinstall.sh | sh
 
 curl -L http://install.ohmyz.sh | sh
 
@@ -26,8 +26,6 @@ alias ll='ls -la'
 alias l.='ls -d .* --color=auto'
 
 " >> .zsh_aliases
-
-vim .zshrc
 
 # Load the alias file
 echo ". ~/.zsh_aliases" >> .zshrc

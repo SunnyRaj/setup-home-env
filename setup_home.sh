@@ -13,17 +13,17 @@ touch .zsh_aliases
 
 echo "
 
-alias nimbus="ssh -X sundarcs@nimbus.seas.gwu.edu"
+alias nimbus=\"ssh -X sundarcs@nimbus.seas.gwu.edu\"
 
 
 ## Colorize the ls output
-alias ls='ls --color=auto'
+alias ls=\'ls --color=auto\'
 
 ## Use a long listing format ##
-alias ll='ls -la'
+alias ll=\'ls -la\'
 
 ## Show hidden files ##
-alias l.='ls -d .* --color=auto'
+alias l.=\'ls -d .* --color=auto\'
 
 " >> .zsh_aliases
 
@@ -46,12 +46,12 @@ echo "
 
 # Change prefix key bindings
 ## set -g prefix C-a
-set -g prefix `                   # use tilde key as prefix
-bind `     send-key `             # insert tilde by pressing twice
+set -g prefix \`                   # use tilde key as prefix
+bind \`     send-key \`             # insert tilde by pressing twice
 unbind C-b
 
 # Reload conf file
-bind r source-file ~/.tmux.conf \; display "Reloaded!"
+bind r source-file ~/.tmux.conf \; display \"Reloaded!\"
 
 # Split panes
 bind \ split-window -h
@@ -64,12 +64,12 @@ set -g mouse-resize-pane on
 set -g mouse-select-window on
 
 # Configure colors
-set -g default-terminal "screen-256color"
+set -g default-terminal \"screen-256color\"
 
 # Configure status bar items
 set -g status-left-length 40
 
-set -g status-right "%d %b %R"
+set -g status-right \"%d %b %R\"
 set -g status-utf8 on
 
 # Identify activities on other windows

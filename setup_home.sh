@@ -23,7 +23,7 @@ echo ". ~/.zsh_aliases" >> .zshrc
 
 # Install Janus vim
 curl -L https://bit.ly/janus-bootstrap | bash
-
+cp vimrc.after ~/.vimrc.after
 cd .vim/janus/vim/colors/
 git clone https://github.com/SunnyRaj/cobalt2-vim-theme.git
 cd -

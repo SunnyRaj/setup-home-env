@@ -4,9 +4,19 @@
 
 sudo apt-get install -y software-properties-common python-software-properties
 sudo add-apt-repository -y ppa:danielrichter2007/grub-customizer
-sudo apt-get update && sudo apt-get install -y grub-customizer
+sudo apt-get update
+sudo apt-get -y upgrade
+sudo apt-get install -y grub-customizer
 
-sudo apt-get install -y build-essential tmux git vim curl zsh gparted ctags ruby rake python-pip
+sudo apt-get install -y build-essential git vim curl zsh gparted ctags ruby rake python-pip libevent-dev
+
+##Install latest tmux
+git clone https://github.com/tmux/tmux.git
+cd tmux
+sh autogen.sh
+./configure && make
+sudo mv ./tmux /usr/local/bin
+cd ..
 
 ##Setup tmux configuration
 cp tmux.conf ~/.tmux.conf
@@ -40,3 +50,5 @@ cat ~/setup-home-env/zshrc >> ~/.zshrc
 
 ## Make zsh your default shell. Do not use sudo
 chsh -s /bin/zsh
+
+echo "Exit and relogin to experience your new home"

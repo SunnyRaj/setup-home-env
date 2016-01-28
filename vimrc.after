@@ -1,0 +1,31 @@
+set t_Co=256
+colorscheme cobalt2
+
+set tabstop=8
+set softtabstop=8
+set shiftwidth=8
+set noexpandtab
+
+set wrap
+set linebreak
+set mouse=a
+set wildmenu
+set cursorline
+set laststatus=2
+
+set encoding=utf-8
+
+" Quickly get out of insert mode without your fingers having to leave the
+" home row (either use 'jj' or 'jk')
+inoremap jj <Esc>
+
+" Strip all trailing whitespace from a file, using ,W
+nnoremap <leader>W :%s/\s\+$//<CR>:let @/=''<CR>
+
+set so=999
+
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
+
+set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim/

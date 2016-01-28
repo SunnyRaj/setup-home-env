@@ -36,6 +36,7 @@ wget https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf
 sudo mv PowerlineSymbols.otf /usr/share/fonts/
 sudo fc-cache -vf
 sudo mv 10-powerline-symbols.conf /etc/fonts/conf.d/
+cat zshrc >> ~/.zshrc
 
 ## Make zsh your default shell. Do not use sudo
 chsh -s /bin/zsh

@@ -57,6 +57,7 @@ echo "Exit and relogin to experience your new home"
 #sudo easy_install pip
 #pip install --upgrade pip
 #brew install powerline
-#sudo pip install --user git+git://github.com/Lokaltog/powerline --verbose
+#sudo -H pip install --user git+git://github.com/Lokaltog/powerline --verbose
+#sudo -H pip install psutil
 #brew remove vim
 #brew install vim

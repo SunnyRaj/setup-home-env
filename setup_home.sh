@@ -52,3 +52,11 @@ cat ~/setup-home-env/zshrc >> ~/.zshrc
 chsh -s /bin/zsh
 
 echo "Exit and relogin to experience your new home"
+#Instructions to install on Mac
+#brew install python
+#sudo easy_install pip
+#pip install --upgrade pip
+#brew install powerline
+#sudo pip install --user git+git://github.com/Lokaltog/powerline --verbose
+#brew remove vim
+#brew install vim

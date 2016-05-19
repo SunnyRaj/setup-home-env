@@ -15,6 +15,9 @@ set laststatus=2
 
 set encoding=utf-8
 
+" set powerline fonts for gvim. Essential for vim powerline bar to work.
+set guifont=Meslo\ LG\ S\ DZ\ for\ Powerline:h14
+
 " Quickly get out of insert mode without your fingers having to leave the
 " home row (either use 'jj' or 'jk')
 inoremap jj <Esc>

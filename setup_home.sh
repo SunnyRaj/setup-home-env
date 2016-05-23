@@ -4,17 +4,21 @@
 
 sudo apt-get install -y software-properties-common python-software-properties
 sudo add-apt-repository -y ppa:danielrichter2007/grub-customizer
-sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+# For installing guard
+sudo apt-add-repository -y ppa:brightbox/ruby-ng
 sudo apt-get update
 sudo apt-get -y upgrade
-sudo apt-get install -y grub-customizer
 
+sudo apt-get install -y grub-customizer
+sudo apt-get install -y ruby2.3 ruby2.3-dev
 sudo apt-get install -y build-essential git vim curl zsh gparted ctags ruby rake python-pip libevent-dev
 
 ##Install gcc-6 and make it default
 ##http://askubuntu.com/questions/466651/how-do-i-use-the-latest-gcc-on-ubuntu-14-04
 sudo apt-get install -y gcc-6 g++-6
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 60 --slave /usr/bin/g++ g++ /usr/bin/g++-6
+
 
 ##Install latest tmux
 git clone https://github.com/tmux/tmux.git
@@ -26,6 +30,9 @@ cd ..
 
 ##Setup tmux configuration
 cp tmux.conf ~/.tmux.conf
+
+# Install tmuxinator
+sudo gem install tmuxinator guard
 
 #Install Oh My Zsh shell
 cd ~/

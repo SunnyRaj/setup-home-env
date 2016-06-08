@@ -44,6 +44,10 @@ touch .zsh_aliases
 # Load the alias file
 echo ". ~/.zsh_aliases" >> .zshrc
 
+# git global configs
+git config --global user.name "Sunny Raj"
+git config --global core.editor $(which vim)
+
 # Install Janus vim
 curl -L https://bit.ly/janus-bootstrap | bash
 cp ~/setup-home-env/vimrc.after ~/.vimrc.after

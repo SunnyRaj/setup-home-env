@@ -1,5 +1,5 @@
 #! /bin/sh
-
+set -e
 ##Install grub customizer
 
 sudo apt-get install -y software-properties-common python-software-properties

@@ -25,7 +25,7 @@ inoremap jj <Esc>
 let mapleader = ","
 
 " Strip all trailing whitespace from a file, using ,W
-nnoremap <leader>W :%s/\s\+$//<CR>:let @/=''<CR>
+nnoremap <leader>w :%s/\s\+$//<CR>:let @/=''<CR>
 
 set so=999
 

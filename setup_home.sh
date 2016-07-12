@@ -21,11 +21,12 @@ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 60 --slave /u
 
 
 ##Install latest tmux
+sudo apt-get install -y pkg-config libncurses5-dev
 git clone https://github.com/tmux/tmux.git
 cd tmux
 sh autogen.sh
 ./configure && make
-sudo mv ./tmux /usr/local/bin
+sudo make install
 cd ..
 
 ##Setup tmux configuration

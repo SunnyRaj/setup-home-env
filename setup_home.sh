@@ -1,7 +1,7 @@
 #! /bin/sh
 set -e
 ##Install grub customizer
-
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
 sudo apt-get install -y software-properties-common python-software-properties
 sudo add-apt-repository -y ppa:danielrichter2007/grub-customizer
 sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test

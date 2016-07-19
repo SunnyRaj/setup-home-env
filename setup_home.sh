@@ -16,18 +16,14 @@ sudo apt-get install -y build-essential git vim curl zsh gparted ctags ruby rake
 
 ##Install gcc-6 and make it default
 ##http://askubuntu.com/questions/466651/how-do-i-use-the-latest-gcc-on-ubuntu-14-04
-sudo apt-get install -y gcc-6 g++-6
-sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 60 --slave /usr/bin/g++ g++ /usr/bin/g++-6
+#sudo apt-get install -y gcc-6 g++-6
+#sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 60 --slave /usr/bin/g++ g++ /usr/bin/g++-6
 
+##Install latest gnuplot
+brew install gnuplot --with-cairo --with-x11
 
 ##Install latest tmux
-sudo apt-get install -y pkg-config libncurses5-dev
-git clone https://github.com/tmux/tmux.git
-cd tmux
-sh autogen.sh
-./configure && make
-sudo make install
-cd ..
+brew install tmux
 
 ##Setup tmux configuration
 cp tmux.conf ~/.tmux.conf

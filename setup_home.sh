@@ -25,6 +25,9 @@ brew install gnuplot --with-cairo --with-x11
 ##Install latest tmux
 brew install tmux
 
+##Install gdb
+brew install gdb
+
 ##Setup tmux configuration
 cp tmux.conf ~/.tmux.conf
 

@@ -1,6 +1,7 @@
 #! /bin/sh
 set -e
-##Install grub customizer
+
+sudo apt-get install -y ruby2.3 ruby2.3-dev
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
 sudo apt-get install -y software-properties-common python-software-properties
 sudo add-apt-repository -y ppa:danielrichter2007/grub-customizer
@@ -10,8 +11,8 @@ sudo apt-add-repository -y ppa:brightbox/ruby-ng
 sudo apt-get update
 sudo apt-get -y upgrade
 
+##Install grub customizer
 sudo apt-get install -y grub-customizer
-sudo apt-get install -y ruby2.3 ruby2.3-dev
 sudo apt-get install -y build-essential git vim curl zsh gparted ctags ruby rake python-pip libevent-dev
 
 ##Install gcc-6 and make it default

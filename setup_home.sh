@@ -1,15 +1,15 @@
 #! /bin/sh
 set -e
 
+sudo apt-add-repository ppa:brightbox/ruby-ng
+sudo add-apt-repository -y ppa:danielrichter2007/grub-customizer
+sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+sudo apt-get update
+sudo apt-get -y upgrade
+
 sudo apt-get install -y ruby2.3 ruby2.3-dev
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
 sudo apt-get install -y software-properties-common python-software-properties
-sudo add-apt-repository -y ppa:danielrichter2007/grub-customizer
-sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
-# For installing guard
-sudo apt-add-repository -y ppa:brightbox/ruby-ng
-sudo apt-get update
-sudo apt-get -y upgrade
 
 ##Install grub customizer
 sudo apt-get install -y grub-customizer
@@ -19,6 +19,7 @@ sudo apt-get install -y build-essential git vim curl zsh gparted ctags ruby rake
 ##http://askubuntu.com/questions/466651/how-do-i-use-the-latest-gcc-on-ubuntu-14-04
 #sudo apt-get install -y gcc-6 g++-6
 #sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 60 --slave /usr/bin/g++ g++ /usr/bin/g++-6
+cat ~/setup-home-env/zshrc >> ~/.zshrc
 source ~/.zshrc
 ##Install latest gnuplot
 brew install gnuplot --with-cairo --with-x11
@@ -64,7 +65,6 @@ wget https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf
 sudo mv PowerlineSymbols.otf /usr/share/fonts/
 sudo fc-cache -vf
 sudo mv 10-powerline-symbols.conf /etc/fonts/conf.d/
-cat ~/setup-home-env/zshrc >> ~/.zshrc
 
 ## Make zsh your default shell. Do not use sudo
 chsh -s /bin/zsh
